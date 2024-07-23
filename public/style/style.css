@@ -1,0 +1,175 @@
+section{
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 100px;
+    
+}
+.customSection{
+    flex-direction: column;
+}
+.BlueBG{
+    
+    background-color: rgb(60, 59, 59);
+    
+}
+
+/* Register style */
+.formdiv{
+
+    width: 650px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    
+}
+
+
+.userImage{
+    width: 150px;
+
+}
+
+.userHeading{
+    color: rgb(7, 0, 46);
+}
+
+.imageSize{
+    width: 250px;
+}
+
+
+
+
+/* Admin Dashboard styles */
+.dashBoardAlign{
+    align-items: start;
+}
+.dashHeader{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    background-color: white;
+   
+}
+.centerBtn{
+    height: 111px;
+    box-sizing: border-box;
+    padding: 34px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-grey{
+    background-color: lightgray;
+}
+.btn-grey:hover{
+    background-color: darkgrey;
+}
+.searchBar{
+    width: 550px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.searchBar h1{
+    padding-right: 20px;
+}
+.searchBar input{
+    height: 45px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+.searchBar form{
+    display: flex;
+}
+
+.searchBar button{
+    height: 45px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+}
+
+
+
+
+/*Table styles*/
+.table-responsive{
+    position: relative;
+    overflow: auto;
+    max-height: 550px;
+}
+
+.table thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* Success Page style*/
+.CustomSuccess{
+    color: rgb(76, 162, 243);
+}
+
+
+/* User home style */
+.userHomeDataStyle{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+
+/*edit-user page styles*/
+.formdivForEditUser{
+   
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(125, 124, 124);
+    border-radius: 50px;
+}
+
+
+/* Register style */
+.adminAdduserformdiv{
+
+    width: 650px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(128, 127, 127);
+    border-radius: 50px;
+    
+}

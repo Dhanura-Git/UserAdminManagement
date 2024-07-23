@@ -1,0 +1,42 @@
+<%- include("../layouts/header.ejs")  %>
+
+    <section class="customSection">
+        <h1 class="userHeading">Welcome <%=user.name%> </h1>
+        <br>
+        <div class="userHomeDataStyle">
+
+        <img src="/static/userImages/<%=user.image%>" alt="<%=user.image%>" class="userImage" >
+       
+        <table class="userFont ">
+            
+            <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td><%=user.name%></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>:</td>
+                <td><%=user.email%></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>:</td>
+                <td><%=user.mobile%></td>
+            </tr>
+        </table>
+
+        </div>
+
+        <br>
+        
+        <div>
+            <button onclick="window.location.href= '/logout'" class="btn btn-danger" >Logout</button>
+            <button  onclick="window.location.href= '/edit-user/?id=<%=user._id%>'" class="btn btn-success" >Edit Data</button>
+        </div>
+
+    </section>
+    
+
+
+<%- include("../layouts/footer.ejs")  %>

@@ -1,0 +1,44 @@
+
+
+
+
+<%- include("../layouts/header.ejs")  %>
+
+
+<section class=" BlueBG">
+
+    <div class="adminAdduserformdiv">
+        <h2>Add New User</h2> <br>
+    <form action="" method="post" enctype="multipart/form-data" class="" >
+        <label for="name" class="text-danger" ><%=locals.Nm%></label>
+        <input type="text" name="name" value="<%=locals.CNm%>" placeholder="Enter name" class="form-control"  class="" >
+        <br>
+        <label for="email" class="text-danger" ><%=locals.Em%></label>
+        <input type="email" name="email" value="<%=locals.CEm%>" placeholder="Enter email" class="form-control" class="">
+        <br>
+        <label for="mobile" class="text-danger" ><%=locals.Mob%></label>
+        <input type="text" name="mobile" value="<%=locals.CMob%>" placeholder="Enter mobile num" class="form-control" class="">
+        <br>
+        <input type="file" name="image" class="form-control" >
+        <br>
+        <label for="password" class="text-danger" ><%=locals.Ps%></label>
+        <input type="password" name="password" placeholder="Enter password" class="form-control" class="" >
+        <br>
+        <input type="submit" value="Add User" class="btn btn-success" class="">
+    
+    </form>
+    <br>
+    <%if(typeof message !== 'undefined'){%>
+    
+        <p style="color: green;"><%= message %></p>
+    
+    <%}%>
+    <a href="/admin/dashboard">Go back</a>
+
+    </div>
+
+</section>
+
+
+
+<%- include("../layouts/header.ejs")  %>

@@ -1,0 +1,30 @@
+<%-include('../layouts/header.ejs')%>
+
+<section>
+    <div>
+
+        <h1>Welcome <%=admin.name%></h1>
+        <td> <img src="/static/userImages/<%= admin.image%>" alt="" class="imageSize"> </td>
+            <table>
+
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><%=admin.email%></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td>:</td>
+                    <td><%=admin.mobile%></td>
+                </tr>
+
+            </table>
+        <div>
+            <button onclick="window.location.href = '/admin/dashboard'" class="btn btn-success">GoTo Dashboard</button>
+            <button onclick="window.location.href = '/admin/logout'" class="btn btn-danger">Logout</button>
+        </div>
+
+    </div>
+</section>
+
+<%-include('../layouts/footer.ejs')%>

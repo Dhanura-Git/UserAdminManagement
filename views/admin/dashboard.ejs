@@ -1,0 +1,85 @@
+<%- include("../layouts/header.ejs")  %>
+
+
+<section class="dashBoardAlign">
+
+    <div>
+        <div class="dashHeader">
+
+            <div class="searchBar">
+               <h1>Dashboard</h1> 
+                <form action="/admin/dashboard" method="get" >
+                    <input type="text" class="form-control h-2" name="name" placeholder="search user">
+                    <button type="submit" class="btn btn-grey" >search</button>
+                </form>
+
+            </div>
+            <div>
+                <button onclick="window.location.href = '/admin/home'" class="btn btn-grey">Go back</button>
+                <button onclick="window.location.href = '/admin/newUser'" class="btn btn-grey">Add new User</button>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="table-responsive">
+
+            <table class="table-bordered" width="1000px">
+            
+                <thead>
+                    <tr>
+                        <th style="width: 110px;">Image</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th style="width: 200px;">Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                <%if(users.length !== 0){
+                    
+                    for(let i = 0; i < users.length; i++){ %>
+    
+                            <tr>
+                                <td> <img src="/static/userImages/<%= users[i].image %>" alt="" style="width: 110px;" > </td>
+                                <td><%= users[i].name %></td>
+                                <td><%= users[i].email %></td>
+                                <td><%= users[i].mobile %></td>
+                                <td class="centerBtn">
+                                    <button onclick="window.location.href = '/admin/editUser?id=<%=users[i]._id%>'" class="btn btn-success" >Edit</button>
+                                   
+                                    <button onclick="deleteUser('<%= users[i]._id %>')" class="btn btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            
+                            <%}%>
+                            
+                            <%}
+                            
+                            else{%>
+                                <tr>
+                                    <td colspan="5">Users not found !!</td>
+                                </tr>
+                                <%}%>
+                </tbody>
+                                
+            </table>
+
+        </div>
+        
+
+    </div>
+
+</section>
+
+
+<script>
+    function deleteUser(userId) { 
+      if(confirm("Are you sure you want to delete this user?")){
+        window.location.href = `/admin/deleteUser/?id=${userId}`
+      }
+    }
+  </script>
+
+<%- include("../layouts/footer.ejs")  %>

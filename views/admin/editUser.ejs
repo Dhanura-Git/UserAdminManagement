@@ -1,0 +1,30 @@
+<%- include("../layouts/header.ejs")  %>
+
+
+
+<section class="BlueBG">
+    <div>
+
+        <h2 class="text-white">Edit User Data</h2>
+        
+        <form action="" method="post" style="max-width: 480px; margin: auto;">
+            <input type="text" name="name" value="<%=user.name%>" required placeholder="Enter name" class="form-control">
+            <br>
+            <input type="email" name="email" value="<%=user.email%>" required placeholder="Enter email" class="form-control">
+            <br>
+            <input type="password" name="password" required placeholder="Type your password" class="form-control">
+            <br>
+            <input type="hidden" name="id" value="<%= user._id%>" >
+            <input type="submit" value="Update User" class="btn btn-success">
+        </form> 
+        <br>
+        <a href="/admin/dashboard">GoTo Dashboard</a>
+
+
+
+    </div>
+</section>
+
+
+
+<%- include("../layouts/footer.ejs")  %>

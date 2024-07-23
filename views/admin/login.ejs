@@ -1,0 +1,31 @@
+<%-include('../layouts/header.ejs')%>
+
+
+<section class="BlueBG">
+    <div>
+        <h1 class="text-white">Admin Login</h1>
+
+      
+
+        <form action="" method="post">
+            <label for="email" class="text-danger" ><%=locals.Em%></label>
+            <input type="email" name="email" value="<%=locals.CEm%>" placeholder="Enter email" class="form-control"> 
+            <br>
+            <label for="password" class="text-danger" ><%=locals.Ps%></label>
+            <input type="password" name="password" placeholder="Enter password" class="form-control">
+            <br>
+            <%if(typeof message !=='undefined'){%>
+                <p class="text-danger"><%=message%></p>
+                <%}else{%>
+
+                    <br>
+                <%}%>
+            <input type="submit" value="Login" class="btn btn-success form-control">
+        </form>
+    </div>
+</section>
+
+
+
+
+<%-include('../layouts/footer.ejs')%>

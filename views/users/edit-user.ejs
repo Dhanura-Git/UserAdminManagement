@@ -1,0 +1,37 @@
+<%- include("../layouts/header.ejs")  %>
+
+
+<section class=" BlueBG">
+
+    <div class="formdivForEditUser">
+        <img src="/static/userImages/<%=user.image%>" alt="<%=user.image%>" class="userImage" > <br>
+    <form action="" method="post" enctype="multipart/form-data" class="" >
+        
+        <input type="hidden" name="id" value="<%=user._id%>">
+        <input type="file" name="image" class="form-control">
+        <br>
+        <input type="text" name="name" value="<%= user.name%>" placeholder="Enter name" class="form-control" required class="">
+        <br>
+        <input type="email" name="email" value="<%= user.email%>" placeholder="Enter email" class="form-control" required class="">
+        <br>
+        <input type="text" name="mobile" value="<%= user.mobile%>" placeholder="Enter mobile num" class="form-control" required class="">
+        <br>
+        <input type="password" name="password" placeholder="Enter password" class="form-control" required class="">
+        <br>
+        <input type="submit" value="Update" class="btn btn-success" class="">
+    
+    </form>
+    <br>
+    <%if(typeof message !== 'undefined'){%>
+    
+        <p style="color: green;"><%= message %></p>
+    
+    <%}%>
+   
+    </div>
+
+</section>
+
+
+
+<%- include("../layouts/header.ejs")  %>
